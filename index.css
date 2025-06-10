@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fbf4fb;
+}
+@font-face {
+  font-family: myFont1;
+  src: url("font/UTM\ Duepuntozero.ttf");
+}
+@font-face {
+  font-family: myFont2;
+  src: url("font/UTM\ DuepuntozeroBold.ttf");
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  background-color: blueviolet;
+  align-items: center;
+  padding: 0 20px;
+}
+nav,
+nav ul,
+nav ul li,
+nav ul li a {
+  height: 100%;
+  display: block;
+  list-style: none;
+}
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  line-height: 30px;
+  padding: 0 20px;
+  border-right: 1px solid white;
+}
+nav ul li a:hover {
+  background-color: white;
+  color: blueviolet;
+}
+nav ul li:last-child a {
+  border-right: 0;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  padding: 2px 10px;
+  border-radius: 3px;
+}
+
+.search button {
+  background-color: transparent;
+  padding: 2px 20px;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.logo {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+.block-logo {
+  width: 250px;
+  height: 150px;
+  position: relative;
+}
+svg {
+  width: 100%;
+  height: 100%;
+}
+#vong1 {
+  fill: #e39292;
+}
+#vong2 {
+  fill: #db2f2f;
+}
+.block-logo::after {
+  content: "my";
+  color: #e39292;
+  font-family: myFont1;
+  position: absolute;
+  font-size: 40px;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+}
+.block-logo::before {
+  content: "perFume";
+  color: #c8b2dc;
+  font-family: myFont2;
+  font-size: 40px;
+  position: absolute;
+  top: 68%;
+  right: -37px;
+  transform: translateY(-50%);
+}
+main {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 40px;
+  padding-bottom: 150px;
+}
+.block-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+aside {
+  width: 28%;
+}
+section.content {
+  width: 70%;
+}
+aside img {
+  width: 100%;
+}
+aside .title {
+  background-color: blueviolet;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  margin: 15px 0;
+}
+aside .content {
+  padding: 15px;
+  border: 1px solid gray;
+}
+aside .content ul {
+  list-style: none;
+}
+aside .content ul a {
+  display: block;
+  margin: 10px 0;
+}
+section.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.content .item {
+  width: 32%;
+  border: 1px solid gray;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+section.content .item img {
+  width: 100%;
+}
+section.content .item p {
+  color: rgb(234, 0, 246);
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0;
+}
+section.content .item p::first-letter {
+  font-size: 30px;
+}
+section.content .item span {
+  color: gray;
+}
+.banner {
+  background-image: url("img/banner.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 150px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(231, 231, 231);
+  font-family: myFont1;
+  width: 100%;
+  background-color: blueviolet;
+  height: 60px;
+}
+.search {
+  position: relative;
+}
+
+.search input {
+  width: 30px;
+  transition: all 1s;
+  cursor: pointer;
+}
+.search input:hover {
+  width: 200px;
+}
+.item {
+  padding-top: 65px !important;
+  overflow: hidden;
+  transition: all 1s;
+}
+.item .title {
+  transform: translateY(90px);
+  transition: all 1s;
+}
+.item:hover .title {
+  transform: translateY(0);
+}
+.item:hover {
+  padding-top: 20px !important;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .content .item {
+    width: 49% !important;
+  }
+  .item .title {
+    transform: translateY(0);
+    transition: all 1s;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 720px) {
+  .content .item {
+    width: 100% !important;
+  }
+  .item .title {
+    transform: translateY(0);
+    transition: all 1s;
+  }
+  .block-main aside,
+  .block-main section.content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
