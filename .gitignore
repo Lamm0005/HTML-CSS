@@ -1,0 +1,16 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Node modules (nếu có)
+node_modules/
+
+# Ignore fonts & build output (nếu cần)
+dist/
+build/
+
+# Others
+*.log
